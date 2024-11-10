@@ -91,11 +91,11 @@ const SearchUserBar: FC<SearchUserBar> = ({chatChange}) => {
             <CommandGroup heading='Users'>
               {queryResults?.map((user) => (
                 <CommandItem
-                  onSelect={async (e) => {
-                    await handleAddChat(e)
+                  onSelect={async () => {
+                    await handleAddChat(user.username)
                   }}
                   key={user.id}
-                  value={user.username}>
+                  value={user.id}>
                   <Users className='mr-2 h-4 w-4' />
                   <p>r/{user.username}</p>
                 </CommandItem>

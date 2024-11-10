@@ -31,8 +31,8 @@ const Post: FC<PostProps> = ({
   const pRef = useRef<HTMLParagraphElement>(null)
 
   return (
-    <div className='rounded-md bg-white shadow'>
-      <div className='px-6 py-4 flex justify-between'>
+    <div className='rounded-md bg-white shadow' suppressHydrationWarning={true}>
+      <div className='px-6 py-4 flex justify-between' suppressHydrationWarning={true}>
         <PostVoteClient
           postId={post.id}
           initialVotesAmt={_votesAmt}
@@ -62,7 +62,7 @@ const Post: FC<PostProps> = ({
 
           <div
             className='relative text-sm max-h-40 w-full overflow-clip'
-            ref={pRef}>
+            ref={pRef} suppressHydrationWarning={true}>
             <EditorOutput content={post.content} />
             {pRef.current?.clientHeight === 160 ? (
               // blur bottom if content is too long
@@ -72,7 +72,7 @@ const Post: FC<PostProps> = ({
         </div>
       </div>
 
-      <div className='bg-gray-50 z-20 text-sm px-4 py-4 sm:px-6'>
+      <div className='bg-gray-50 z-20 text-sm px-4 py-4 sm:px-6' suppressHydrationWarning={true}>
         <Link
           href={`/r/${subredditName}/post/${post.id}`}
           className='w-fit flex items-center gap-2'>

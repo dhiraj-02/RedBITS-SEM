@@ -13,7 +13,7 @@ const Navbar = async () => {
       <div className='container max-w-7xl h-full mx-auto flex items-center justify-between gap-2'>
         {/* logo */}
         <Link href='/' className='flex gap-2 items-center'>
-          <Icons.logo  className="h-15 w-auto sm:h-10" />
+          <img src='/bitslogo.png' className="h-15 w-auto sm:h-10" />
           <p className='hidden text-zinc-700 text-sm font-medium md:block'>RedBITS</p>
         </Link>
 

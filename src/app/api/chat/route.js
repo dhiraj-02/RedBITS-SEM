@@ -35,6 +35,7 @@ export async function GET(req) {
           chatDetails['id'] = chats.id
           ret.push(chatDetails)
         }
+        
 
         return new Response(JSON.stringify({status:200, chatList:ret, myDetails: session.user}))
       }

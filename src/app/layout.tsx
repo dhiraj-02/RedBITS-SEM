@@ -32,7 +32,7 @@ export default function RootLayout({
       <link rel="icon" href="/bitslogo.png" type="image/png" sizes="16x16" />
       <link rel="icon" href="/bitslogo.png" type="image/png" sizes="180x180" />
       </head>
-      <body className='min-h-screen pt-12 bg-slate-50 antialiased'>
+      <body className='min-h-screen pt-12 bg-slate-50 antialiased' suppressHydrationWarning={true}>
         <Providers>
           {/* @ts-expect-error Server Component */}
           <Navbar />

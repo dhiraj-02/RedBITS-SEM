@@ -27,6 +27,7 @@ const page = () => {
   const fetchChatList = async () => {
     try{
       const chatList = await axios.get(`api/chat`);
+      console.log(chatList.data)
       setList(chatList.data.chatList)
       setCurUser(chatList.data.myDetails)
     } catch (err){
