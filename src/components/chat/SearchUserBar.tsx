@@ -63,7 +63,7 @@ const SearchUserBar: FC<SearchUserBar> = ({chatChange}) => {
     setInput('')
   }, [pathname])
 
-  async function handleAddChat(e: String){
+  async function handleAddChat(e: String | null){
     setInput('');
     const newChat = await axios.post(`/api/chat/new`, {username: e});
     chatChange(newChat.data.chat)
